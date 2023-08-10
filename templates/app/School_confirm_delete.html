@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: darkseagreen;">
+    <center>
+    <h1>Deleting the selected instance</h1>
+      
+    <h1>Are u sure to delete {{dso.scname}}</h1>
+    <form  method="post">
+        {% csrf_token %}
+        <input type="submit" value="yes-sure-to-delete">
+    </form>
+    <h1><a href="{% url 'Schoollist' %}">No take me back to school list</a></h1>
+    <h1><a href="{% url 'detail' pk=dso.pk %}"> No take me back to Detail</a></h1>
+</center>
+</body>
+</html>
